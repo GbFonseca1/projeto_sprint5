@@ -16,7 +16,6 @@ if hist_button:
 scatter_button = st.button('Criar gráfico de dispersão') # criar um botão
 if scatter_button:
 
-    car_data = pd.read_csv('vehicles_us.csv') # lendo os dados
+    car_data = pd.read_csv('vehicles.csv') # lendo os dados
     fig = px.scatter(car_data, x="odometer", y="price") # criar um gráfico de dispersão
     st.plotly_chart(fig, use_container_width=True) # exibindo
-    
